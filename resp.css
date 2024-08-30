@@ -1,0 +1,181 @@
+@media (max-width: 750px) {
+    header {
+        padding: 10px;
+        justify-content: space-between;
+    }
+
+    h2 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .logo img {
+        max-height: 35px;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+    }
+
+    .user a {
+        margin: 10px;
+        color: #fff;
+    }
+
+    .user i {
+        padding-bottom: 5px;
+    }
+
+    .menu-icon {
+        width: 20px;
+        height: 21px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .nav ul i {
+        display: none;
+    }
+
+    .menu-icon {
+        /* padding-top: 15px; */
+        display: flex;
+    }
+
+    .hero {
+        justify-content:  space-evenly;
+        flex-direction: column-reverse;
+        padding: 35px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .hero-content p {
+        text-align: center;
+    }
+
+    .hero-content .cta-btn {
+        text-align: center;
+    }
+
+    .hero-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        width: 400px;
+    }
+
+    .cta {
+        font-size: 15px;
+    }
+
+    .image-slider .slider {
+        flex-direction: column;
+        gap: 15px;
+        /* width: 100%; */
+    }
+
+    .image-slider .slider img {
+        height: 200px;
+        width: 250px;
+    }   
+
+    .viewBtn {
+        margin-top: 10px;
+    }
+
+    .review h3 {
+        font-size: 20px;
+    }
+
+    .review p {
+        font-size: 15px;
+    }
+
+    .review img {
+        height: 35px;
+    }
+
+    .newsletter form {
+        flex-direction: column;
+    }
+    
+    .newsletter input[type="email"] {
+        margin: 5px;
+    }
+
+    .more h2 {
+        margin-bottom: 10px
+    }
+    
+    .more .slider img {
+        margin: 5px;
+        height: 150px;
+    }
+
+    .more .slider {
+        flex-direction: column;
+    }
+
+    .morePhone .cta {
+        margin-bottom: 15px;
+    }
+
+    footer .social-icons {
+        margin: 10px;
+    }
+
+    .sidebar .social-icons i {
+        font-size: 25px;
+        margin: 8px;
+        padding-top: 10px;
+        &:hover {
+            background-color: none;
+        }
+    }
+
+    footer .social-icons i {
+        height: 40px;
+        width: 40px;
+        font-size: 40px;
+
+        &:hover {
+            background-color: none;
+        }
+    }
+
+    .FaQ-Box {
+        max-width: 100%;
+        /* line-height: 1.2; */
+    }
+
+    .specs {
+        max-width: 80%;
+    }
+    
+    .specsTitle, .question {
+        font-size: 30px;
+    }
+
+    .specsImfo, .answer {
+        font-size: 20px;
+        text-decoration: dotted;
+    }
+
+    .sidebar .Extra-link {
+        color: #555;
+        text-transform: uppercase;
+    }
+
+    .dark-mode .sidebar .Extra-link {
+        color: #7e7e7e;
+    }
+}

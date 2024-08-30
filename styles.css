@@ -1,0 +1,567 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.viewBtn {
+    margin-top: 15px;
+}
+
+span {
+    font-weight: normal;
+    border: 2px solid #FF4A00;
+    padding: 0 5px;
+    border-radius: 15px;
+}
+
+.dark-mode span {
+    border: 2px solid #ddd;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1 {
+    color: #FF4A00;
+}
+
+h2 {
+    font-size: 50px;
+    color: #FF4A00;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.dark-mode-toggle button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #FF4A00;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+/* Header */
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    /* justify-content: space-around; */
+    align-items: center;
+    padding: 20px;
+    /* background-color: #FF4A00; */
+    background-color: #e0e0e0e1 ;
+    transition: background-color 0.3s;
+}
+
+.dark-mode header {
+    background-color: #222222e1;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+/* .logo i {
+    font-size: 30px;
+    padding-top: 0;
+    padding-bottom: 10px;
+} */
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    /* color: white; */
+    font-size: 20px;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        color: #FF4A00;
+        /* border-bottom: 1px solid #FF4A00; */
+    }
+}
+
+nav ul i {
+    font-size: 20px;
+    margin: 5px;
+    padding-left: 15px;
+    &:hover {
+        color: #FF4A00;
+        /* border-bottom: 1px solid #FF4A00; */
+    }
+}
+
+.dark-mode nav ul li a {
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        color: #FF4A00;
+        /* border-bottom: 1px solid #FF4A00; */
+    }
+}
+
+/* Sidebar for Small Screens */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Sidebar starts off the screen to the right */
+    width: 250px;
+    height: 100%;
+    background-color: #eee;
+    padding: 50px 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3); /* Adjust shadow direction */
+    z-index: 1000;
+    transition: right 0.3s ease; /* Animate the right position */
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        color: #FF4A00;
+    }
+}
+
+.sidebar.active {
+    right: 0; /* Slide the sidebar in from the right */
+}
+
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    margin: 25px;
+    /* position: absolute; */
+    top: 100%;
+    left: 100px; /* Position `the icon near the logo */
+    transform: translateY(-50%);
+    z-index: 1001;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-icon span {
+    background-color: #fff;
+    /* height: 3px; */
+    width: 30px;
+    /* height: 21px; */
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* .menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 9px;
+    position: absolute;
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 9px;
+    position: absolute;
+} */
+
+.dark-mode .sidebar {
+    background-color: #222;
+    transition: right 0.3s ease;
+}
+
+.dark-mode .sidebar a {
+    color: #e0e0e0;
+}
+
+/* Hero Section with Parallax Scrolling */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    /* background-image: url('/img/Main\ BG.webp'); */
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    /* color: #121212; */
+}
+
+.dark-mode .hero-content h1,
+.dark-mode .hero-content p {
+    color: #ddd;
+    /* color: #121212; */
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #121212;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+.hero-image img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+/* Image Slider Section */
+.image-slider {
+    padding: 50px;
+    text-align: center;
+    background-color: #FFF0E5;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .image-slider {
+    background-color: #2a2a2a;
+}
+
+.image-slider .slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    /* overflow: hidden; */
+}
+
+.image-slider .slider img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.cta {
+    color: white;
+    background-color: #FF4A00;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.2s ease-in;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+/* Comparison Section */
+.comparison {
+    padding: 50px;
+    /* background-color: #FFF0E5; */
+    background-color: #f5f5f5;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .comparison {
+    /* background-color: #2a2a2a; */
+    background-color: #1e1e1e;
+}
+
+.comparison h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow-x: scroll;
+}
+
+.comparison table, .comparison th, .comparison td {
+    border: 1px solid #ddd;
+}
+
+.comparison th, .comparison td {
+    padding: 15px;
+    text-align: center;
+}
+
+.comparison th {
+    background-color: #FF4A00;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .comparison th {
+    background-color: #444;
+}
+
+.comparison tr:nth-child(even) {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .comparison tr:nth-child(even) {
+    background-color: #333;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 50px;
+    /* background-color: #f5f5f5; */
+    background-color: #FFF0E5;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .reviews {
+    /* background-color: #1e1e1e; */
+     background-color: #2a2a2a;
+}
+
+.reviews h2 {
+    /* font-size: 36px; */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.review {
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dark-mode .review {
+    /* background-color: #2a2a2a; */
+     background-color: #1e1e1e;
+    box-shadow: none;
+}
+
+.review img {
+    height: 50px;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.review h3 {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* margin: 10px; */
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #FF4A00;
+}
+
+.review p {
+    font-size: 25px;
+}
+
+/* More */
+.more {
+    /* margin: 30px; */
+    padding: 50px;
+    background-color: #FFF0E5;
+}
+
+.more h2 {
+    /* margin: 40px; */
+    text-align: center
+}
+
+.more .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.more .slider img {
+    margin: 15px;
+    height: 200px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.more .slider h3{
+    /* margin-bottom: 40px; */
+    margin: 15px;
+    font-size: 25px;
+    text-align: center
+}
+
+.more .morePhone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode .more h3 {
+    color: #ddd;
+}
+
+.dark-mode .more {
+    background-color: #2a2a2a;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    margin-bottom: 20px;
+    /* font-size: 36px; */
+}
+
+.newsletter p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter input[type="email"] {
+    /* margin: 5px; */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #FF4A00;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF4A00;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.dark-mode .newsletter {
+    background-color: #1e1e1e;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    /* background-color: #FF4A00; */
+    background-color: #e0e0e0;
+    color: white;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.dark-mode footer {
+    background-color: #222;
+}
+
+footer a, footer p {
+    font-size: 20px;
+    color: #222;
+    text-decoration: none;
+}
+
+footer .social-icons {
+    margin: 20px ;
+}
+
+footer .social-icons i {
+    width: 70px; 
+    height: 70px;
+    border-radius: 40%; 
+    color: #121212; 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px; 
+    margin: 5px; 
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.dark-mode footer .social-icons i, .dark-mode footer p, .dark-mode footer a{
+    color: #e0e0e0;
+    transition: color 0.5s;
+} 
+
+.dark-mode footer .social-icons i:hover {
+    color: #222;
+}
+
+/* Dark Mode Toggle Transition */
+body.dark-mode, 
+body.dark-mode * {
+    transition: background-color 0.3s, color 0.3s;
+}
+

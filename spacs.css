@@ -1,0 +1,27 @@
+.specificationsBox{
+    width: 100%;
+    margin: 25px;
+    /* border:  2px solid black; */
+}
+
+.FaQ-Box {
+    margin: 25px;
+    line-height: 1.4;
+    /* max-width: 70%; */
+}
+
+.specs, .FaQ-Box {
+    max-width: 70%;
+    margin: 10px ;
+}
+
+.specsTitle, .question {
+    margin: 10px;
+    margin-top: 25px;
+    font-size: 35px;
+}
+
+.specsImfo, .answer {
+    padding: 5px;
+    font-size: 25px;
+}
