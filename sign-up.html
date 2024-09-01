@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up to your Xiaomi Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sign-in.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Create Xiaomi Account</h1>
+        <img src="/img/MI_Logo.png" alt="Xiaomi Logo" class="logo">
+        <p class="message msg-su">We'll store your data in accordance with the laws and regulation of the country or region that you selact.</p>
+
+        <form class="login-form">
+            <input type="text" placeholder="Enter Country Name" required>
+            <input type="text" placeholder="Email address" required>
+            <div class="password-container">
+                <input type="password" placeholder="Enter your password" id="password" required>
+            </div>
+            <div class="password-container">
+                <input type="password" placeholder="Enter your password" id="confirm-password" required>
+            </div>-
+            <p class="message">8-16 characters, combining at least 2 of the following: digits, letters and spacial symbols.</p> 
+
+            <div class="check-box">
+                <input type="checkbox" name="afreemant" id="agreement"> I've read and agreed to Xiaomi's <a class="link-in" href="#">User agreement</a> and <a class="link-in"  href="#">Privacy Policy</a>.
+            </div>
+            <button type="submit" class="signin-btn" disabled>Sign up</button>
+        </form>
+
+        <div class="links">
+            <a href="sign-in.html">Sign in ?</a>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your Xiaomi Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="sign-in.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign in to your Xiaomi Account</h1>
+        <img src="MI_Logo.png" alt="Xiaomi Logo" class="logo">
+        <p class="message">Always believe that something wonderful is about to happen</p>
+
+        <form class="login-form">
+            <input type="text" placeholder="Email/Phone/Xiaomi Account" required>
+            <div class="password-container">
+                <input type="password" placeholder="Enter your password" id="password" required>
+            </div>
+            <button type="submit" class="signin-btn" disabled>Sign in</button>
+        </form>
+
+        <button class="google-signin">
+            <img src="/img/google.png" alt="Google Logo">
+            Sign in with Google
+        </button>
+
+        <button class="facebook-signin">
+            <i class="fa-brands fa-facebook"></i>Sign in with Facebook
+        </button>
+        
+        <div class="links">
+            <a href="sign-up.html">Create account</a> | <a href="reset-password.html">Forgot password?</a>
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
